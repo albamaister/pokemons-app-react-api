@@ -73,5 +73,7 @@ export const SpriteImage = styled.img`
  height: 60px;
  cursor: pointer;
   &:hover {
-    transform: scale(1.02);
-    transition
+    transform: scale(2.0);
+    transition: all 0.1s ease-in-out;
+  }
+`

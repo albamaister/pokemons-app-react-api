@@ -76,7 +76,7 @@ export const PokemonBodyScreen = ({pokemons, setReload}) => {
                             />                        
                         }
                         { notFound &&
-                            <h2>No enconrado</h2>
+                            <h2>No encontrado</h2>
                         }
                         { pokemons.loading &&
                             <div>Cargando...</div>
