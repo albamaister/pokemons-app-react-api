@@ -9,37 +9,51 @@
   padding: 0px 10px 20px 10px;
 }
 
-
 .rock {
   background-color: rgb(148, 81, 81);
+  border: 3px solid rgb(82, 17, 17);
 }
 .ghost {
   background-color: rgb(247, 247, 247);
+  border: 3px solid #DFDFDF;
 }
 .electric {
   background-color: rgb(255, 255, 161);
+  border: 3px solid #DDDD8C;
 }
 .bug {
   background-color: #F6D6A7;
+  border: 3px solid #E1C1A2;
 }
 .poison {
   background-color: #e0a7f6;
+  border: 3px solid #A485B0;
 }
 .normal {
   background-color: #F4F4F4;
+  border: 3px solid #D5D4D4;
 }
 .fairy {
-  background-color: rgba(255, 192, 203, 0.863);
+  background-color: rgba(252, 24, 62, 0.863);
+  border: 3px solid #B38991;
 }
 .fire {
   background-color: #FBE3DF;
+  border: 3px solid #410f05;
 }
 .grass {
   background-color:#E2F9E1;
+  border: 3px solid #D0E5CF;
 }
 .water {
   background-color:#E0F1FD;
+  border: 3px solid #C9DCEA;
 }
+.psychic {
+  background-color: rgba(212, 192, 100, 0.863);
+  border: 3px solid #B7A659;
+}
+
 
 .app-contaner {
   display: flex;

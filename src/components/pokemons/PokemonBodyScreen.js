@@ -83,15 +83,10 @@ export const PokemonBodyScreen = ({pokemons, setReload}) => {
                         }
                     </div>
                 </div>
-
-
-                
                 <div className='col-6'>
                     {selectedPokemon &&
-                    <PokemonCardDetail selectedPokemon={selectedPokemon}/>
-
+                        <PokemonCardDetail selectedPokemon={selectedPokemon}/>
                     }
-
                 </div>
             </div>
         </div>

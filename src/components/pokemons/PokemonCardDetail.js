@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import * as Styles from './styles';
 
 export const PokemonCardDetail = (props) => {
 
@@ -15,40 +15,28 @@ export const PokemonCardDetail = (props) => {
     for (const prop in sprites) {
         if (sprites[prop] !== null && sprites[prop] !== undefined && typeof sprites[prop] === 'string') imagesAdjuntas.push(sprites[prop]);
     }
-    console.log("\n\nimaes", imagesAdjuntas)
-    // const sprite1 = sprites.back_default;
-    // const sprite2 = sprites.back_female;
-    // const sprite3 = sprites.back_shiny;
-    // const sprite4 = sprites.back_shiny_female;
-    // const sprite5 = sprites.front_default;
-    // const sprite6 = sprites.front_female;
-    // const sprite7 = sprites.front_shiny;
-    // const sprite8 = sprites.front_shiny_female;
-
-    
-    const style = type + " containerDetail";
-    
+        
     return (
-        <div className={style}>
-                <img src={image} alt={name} />
-                <div className="number"><small>#0{id}</small></div>
-                <div className="detail-wrapper">
-                    <h3>{name}</h3>
-                </div>
-                <div className="detail"> 
-                    <h5>Types</h5>
-                    <p>{types}</p>
-                    <h5>Peso</h5>
-                    <p>{`${peso} kg`}</p>
-                    <h5>Sprites</h5>
-                    <div>
-                        {imagesAdjuntas.length > 0 && imagesAdjuntas.map((iAdjunta, index) => 
-                            <img key={index} src={iAdjunta} alt={name} style={{width: 60, height: 60}}/>
-                        )}
-                    </div>
-                    <h5>Movimientos</h5>
-                    <p style={{textAlign: 'justify'}}>{movimientos}</p>
-                </div>
-        </div>
+        <Styles.ContainerDetail type={type}>
+            <Styles.ImageDetail src={image} alt={name} />
+            <Styles.TextNumber>#0{id}</Styles.TextNumber>
+            <Styles.TextName>
+                {name}
+            </Styles.TextName>
+            <Styles.Detail> 
+                <Styles.TextDescription>Types</Styles.TextDescription>
+                <p>{types}</p>
+                <Styles.TextDescription>Peso</Styles.TextDescription>
+                <p>{`${peso} kg`}</p>
+                <Styles.TextDescription>Sprites</Styles.TextDescription>
+                <Styles.SpritesContainer>
+                    {imagesAdjuntas.length > 0 && imagesAdjuntas.map((iAdjunta, index) => 
+                        <Styles.SpriteImage key={index} src={iAdjunta} alt={name}/>
+                    )}
+                </Styles.SpritesContainer>
+                <Styles.TextDescription>Movimientos</Styles.TextDescription>
+                <p style={{textAlign: 'justify'}}>{movimientos}</p>
+            </Styles.Detail>
+        </Styles.ContainerDetail>
     )
 }
